@@ -109,7 +109,7 @@ class NotificationController extends Controller
         $notification=Notification::find($notification);
         if($notification) {
             $notification->delete();
-            return apiHelper::sendResponse(null,'success');
+            return apiHelper::sendResponse('null','success');
         }
         return apiHelper::sendResponse('null','no such record',404,1);
     }
